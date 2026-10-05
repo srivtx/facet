@@ -1,10 +1,10 @@
 import { ImageResponse } from "next/og";
 
-/* axiom / OG card — the identity tile, the wordmark, one line of
+/* Facet / OG card — the identity tile, the wordmark, one line of
    positioning, and the counts. Same dark island language as the
    site: near-black, violet rim, mono labels. */
 
-export const alt = "axiom — precision interface primitives";
+export const alt = "Facet — precision interface primitives";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -66,6 +66,10 @@ export default function OgImage() {
               position: "relative",
             }}
           >
+            {/* the mark, drawn with transforms rather than inline SVG — satori
+                (next/og) does not reliably render nested <svg>, and a hard
+                failure here is an OG card that 404s its own image. A rotated
+                square with a lighter crown reads as a cut stone at 88px. */}
             <div
               style={{
                 position: "absolute",
@@ -75,17 +79,36 @@ export default function OgImage() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                fontSize: 46,
-                fontWeight: 600,
-                color: "#f5f5f7",
               }}
             >
-              a
+              <div
+                style={{
+                  width: 40,
+                  height: 40,
+                  transform: "rotate(45deg)",
+                  background:
+                    "linear-gradient(135deg, #f5f3ff 0%, #c4b5fd 45%, #a78bfa 100%)",
+                  display: "flex",
+                  alignItems: "flex-start",
+                  justifyContent: "center",
+                }}
+              >
+                <div
+                  style={{
+                    width: 0,
+                    height: 0,
+                    marginTop: -2,
+                    borderLeft: "20px solid transparent",
+                    borderRight: "20px solid transparent",
+                    borderTop: "22px solid #d946ef",
+                  }}
+                />
+              </div>
             </div>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
             <div style={{ fontSize: 44, fontWeight: 600, letterSpacing: -1.5 }}>
-              axiom
+              Facet
             </div>
             <div
               style={{

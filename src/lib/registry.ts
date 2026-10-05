@@ -1,4 +1,4 @@
-/* axiom registry — the catalogue of primitives.
+/* Facet registry — the catalogue of primitives.
    Every entry renders a live demo via <DemoStage comp=... variant=... />. */
 
 export type FamilyId =
@@ -109,7 +109,7 @@ export const ENTRIES: AxiomEntry[] = [
     family: "ambience",
     tagline: "Two breathing glows, 26s and 34s clocks.",
     description:
-      "The signature axiom page wash: one violet and one fuchsia radial glow inhale on offset clocks. Opacity is capped at 16% so text keeps 4.5:1 contrast everywhere it overlaps. This is the single ambient loop the whole page is allowed.",
+      "The signature Facet page wash: one violet and one fuchsia radial glow inhale on offset clocks. Opacity is capped at 16% so text keeps 4.5:1 contrast everywhere it overlaps. This is the single ambient loop the whole page is allowed.",
     tags: ["background", "glow", "ambient"],
     variants: [
       { id: "standard", label: "Standard", hint: "Violet over fuchsia" },
@@ -317,7 +317,7 @@ export const ENTRIES: AxiomEntry[] = [
     family: "textfx",
     tagline: "Numbers roll through a digit strip.",
     description:
-      "Each digit lives in a window over a 0–9 strip; value changes translateY the strip with layout animation, so 9→0 physically rolls the full distance. Direction follows increase/decrease. This powers the axiom stats band.",
+      "Each digit lives in a window over a 0–9 strip; value changes translateY the strip with layout animation, so 9→0 physically rolls the full distance. Direction follows increase/decrease. This powers the Facet stats band.",
     tags: ["text", "numbers", "counter"],
     variants: [
       { id: "stat", label: "Stat", hint: "Plain rolling number" },
@@ -374,7 +374,7 @@ export const ENTRIES: AxiomEntry[] = [
     family: "motion3d",
     tagline: "A clean cube — nothing inside but light.",
     description:
-      "The axiom hero object: a six-face glass cube rotating on a 26s linear clock with a 6s counter-float. Faces carry a single glyph mark at most — no paragraphs, no cramming — because the cube is the texture, not the message. Ground glow and a masked isometric floor anchor it.",
+      "The Facet hero object: a six-face glass cube rotating on a 26s linear clock with a 6s counter-float. Faces carry a single glyph mark at most — no paragraphs, no cramming — because the cube is the texture, not the message. Ground glow and a masked isometric floor anchor it.",
     tags: ["3d", "cube", "hero"],
     variants: [
       { id: "mark", label: "With mark", hint: "One glyph on one face" },
@@ -607,7 +607,7 @@ export const familyPath = (id: FamilyId) => `/library/${id}`;
 /** which file a component lives in, for the honest install story */
 export const importPath = (id: string) => {
   const fam = ENTRIES.find((e) => e.id === id)?.family;
-  return fam ? `@/components/ax/${fam}` : "@/components/ax";
+  return fam ? `@/components/facet/${fam}` : "@/components/facet";
 };
 
 /** prev/next within the whole catalogue (alphabetical by family order) */

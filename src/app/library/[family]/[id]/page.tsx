@@ -14,12 +14,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { id } = await params;
   const entry = ENTRIES.find((e) => e.id === id);
-  if (!entry) return { title: "Library | axiom" };
+  if (!entry) return { title: "Library | Facet" };
   return {
-    title: `${entry.name} — ${entry.tagline} | axiom`,
+    title: `${entry.name} — ${entry.tagline} | Facet`,
     description: entry.description,
     openGraph: {
-      title: `${entry.name} | axiom`,
+      title: `${entry.name} | Facet`,
       description: entry.tagline,
     },
   };
@@ -34,7 +34,7 @@ export default async function ComponentPage({
   const entry = ENTRIES.find((e) => e.id === id && e.family === family);
   if (!entry) notFound();
   return (
-    <main className="flex flex-1 flex-col pt-16">
+    <main aria-label="Primitive detail" className="flex flex-1 flex-col pt-16">
       <DetailView entry={entry} />
     </main>
   );

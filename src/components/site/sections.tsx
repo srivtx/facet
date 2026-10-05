@@ -1,6 +1,6 @@
 "use client";
 
-/* axiom / chrome — nav + footer, shared by every route.
+/* Facet / chrome — nav + footer, shared by every route.
    Nav links are real routes now: Library, Docs, Changelog. Active
    route gets the ink; mobile gets a proper sheet menu. */
 
@@ -12,9 +12,11 @@ import { Github, ArrowRight, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { COUNTS, FAMILIES, familyLabel, familyPath } from "@/lib/registry";
 import { ModeToggle } from "@/components/site/theme-toggle";
+import { FacetMark } from "@/components/site/mark";
 
 const LINKS = [
   { href: "/library", label: "Library" },
+  { href: "/library/vendored", label: "Vendored" },
   { href: "/docs", label: "Docs" },
   { href: "/changelog", label: "Changelog" },
 ];
@@ -41,21 +43,16 @@ export function Nav() {
           : "bg-transparent",
       )}
     >
-      <nav className="mx-auto flex h-full max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-10">
+      <nav
+        aria-label="Site"
+        className="mx-auto flex h-full max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-10"
+      >
         <Link
           href="/"
           className="group flex items-center gap-2.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
-          <span
-            className="relative grid size-7 place-items-center rounded-lg"
-            style={{ background: "linear-gradient(135deg, #6366f1, #0ea5e9)" }}
-          >
-            <span className="absolute inset-[1.5px] rounded-[6px] bg-[#0a0a0e]" />
-            <span className="relative font-semibold text-[13px] leading-none text-neutral-100">
-              a
-            </span>
-          </span>
-          <span className="text-[15px] font-semibold tracking-tight text-foreground">axiom</span>
+          <FacetMark size={28} />
+          <span className="text-[15px] font-semibold tracking-tight text-foreground">Facet</span>
           <span className="hidden self-center rounded-md bg-primary/10 px-1.5 py-0.5 font-mono text-[10px] font-medium leading-none text-primary ring-1 ring-primary/20 sm:block">
             v3
           </span>
@@ -87,10 +84,10 @@ export function Nav() {
         <div className="flex items-center gap-2">
           <ModeToggle />
           <a
-            href="https://github.com/srivtx/axiom"
+            href="https://github.com/srivtx/facet"
             target="_blank"
             rel="noreferrer"
-            aria-label="View axiom on GitHub"
+            aria-label="View Facet on GitHub"
             className="hidden size-9 place-items-center rounded-full text-muted-foreground ring-1 ring-border transition-colors hover:text-foreground hover:ring-foreground/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:grid"
           >
             <Github className="size-4" />
@@ -138,7 +135,7 @@ export function Nav() {
                 </Link>
               ))}
               <a
-                href="https://github.com/srivtx/axiom"
+                href="https://github.com/srivtx/facet"
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => setMenu(false)}
@@ -163,16 +160,8 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-[1.6fr_1fr_1fr]">
           <div className="flex flex-col gap-3.5">
             <span className="flex items-center gap-2.5">
-              <span
-                className="relative grid size-7 place-items-center rounded-lg"
-                style={{ background: "linear-gradient(135deg, #6366f1, #0ea5e9)" }}
-              >
-                <span className="absolute inset-[1.5px] rounded-[6px] bg-[#0a0a0e]" />
-                <span className="relative font-semibold text-[13px] leading-none text-neutral-100">
-                  a
-                </span>
-              </span>
-              <span className="text-[15px] font-semibold tracking-tight text-foreground">axiom</span>
+              <FacetMark size={28} />
+              <span className="text-[15px] font-semibold tracking-tight text-foreground">Facet</span>
             </span>
             <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
               {COUNTS.entries} live primitives across {COUNTS.families} families,
@@ -192,14 +181,14 @@ export function Footer() {
               { label: "All primitives", href: "/library" },
               { label: "Docs", href: "/docs" },
               { label: "Changelog", href: "/changelog" },
-              { label: "GitHub", href: "https://github.com/srivtx/axiom" },
-              { label: "License · MIT", href: "https://github.com/srivtx/axiom#license" },
+              { label: "GitHub", href: "https://github.com/srivtx/facet" },
+              { label: "License · MIT", href: "https://github.com/srivtx/facet#license" },
             ]}
           />
         </div>
         <div className="flex flex-wrap items-center justify-between gap-4 border-t border-border pt-6 text-xs text-muted-foreground">
-          <span>© 2026 axiom — MIT licensed.</span>
-          <span className="ax-label text-muted-foreground/50">no screenshots were harmed</span>
+          <span>© 2026 Facet — MIT licensed.</span>
+          <span className="facet-label text-muted-foreground">no screenshots were harmed</span>
         </div>
       </div>
     </footer>

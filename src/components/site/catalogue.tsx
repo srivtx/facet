@@ -1,6 +1,6 @@
 "use client";
 
-/* axiom / catalogue — the library index page. Sticky family sidebar
+/* Facet / catalogue — the library index page. Sticky family sidebar
    on desktop, pill scroller on mobile, live-tile grid, URL-synced
    filters (?f=, ?q=). Every tile is the component itself. */
 
@@ -9,7 +9,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Search, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { DemoStage } from "@/components/ax/stage";
+import { DemoStage } from "@/components/facet/stage";
 import { RAIL } from "@/lib/media";
 import {
   ENTRIES,
@@ -57,9 +57,9 @@ export function Catalogue({
       <header className="flex flex-col gap-8">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="ax-eyebrow text-primary">the library</p>
+            <p className="facet-eyebrow text-primary">the library</p>
             <h1 className="mt-3 text-balance text-3xl font-semibold tracking-[-0.02em] text-foreground sm:text-4xl">
-              Every tile is the <span className="ax-grad">component itself</span>.
+              Every tile is the <span className="facet-grad">component itself</span>.
             </h1>
             <p className="mt-3 max-w-lg text-sm leading-relaxed text-muted-foreground">
               {COUNTS.entries} live primitives across {COUNTS.families} families and{" "}
@@ -67,7 +67,7 @@ export function Catalogue({
               open any tile for its page.
             </p>
           </div>
-          <label className="ax-glass group flex h-11 w-full max-w-xs items-center gap-2.5 rounded-xl px-4 transition-[box-shadow] focus-within:ring-2 focus-within:ring-ring sm:w-72">
+          <label className="facet-glass group flex h-11 w-full max-w-xs items-center gap-2.5 rounded-xl px-4 transition-[box-shadow] focus-within:ring-2 focus-within:ring-ring sm:w-72">
             <Search className="size-4 shrink-0 text-muted-foreground" />
             <input
               value={q}
@@ -96,7 +96,7 @@ export function Catalogue({
           {/* mobile: horizontal pills with a trailing fade hinting
               at more content off-screen */}
           <div className="relative -mx-1 lg:hidden" role="tablist">
-            <div className="ax-scroll flex gap-2 overflow-x-auto px-1 pb-1">
+            <div className="facet-scroll flex gap-2 overflow-x-auto px-1 pb-1">
               {[{ id: "all" as const, label: `All · ${ENTRIES.length}` }, ...FAMILIES.map((f) => ({ id: f.id, label: f.label }))].map(
                 (f) => {
                   const engaged = family === f.id;
@@ -184,7 +184,7 @@ export function Catalogue({
                     ev.currentTarget.style.setProperty("--my", `${ev.clientY - r.top}px`);
                   }}
                   className={cn(
-                    "ax-spot ax-hairline group relative flex h-full flex-col overflow-hidden rounded-2xl bg-card text-left",
+                    "facet-spot facet-hairline group relative flex h-full flex-col overflow-hidden rounded-2xl bg-card text-left",
                     "transition-all duration-200",
                     "hover:-translate-y-1",
                     "shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.08)] hover:shadow-[0_2px_4px_rgba(0,0,0,0.05),0_16px_40px_-16px_rgba(0,0,0,0.14)]",
@@ -193,8 +193,8 @@ export function Catalogue({
                   )}
                 >
                   {/* demo viewport — the dark island */}
-                  <div className="ax-stage relative flex h-56 items-center justify-center overflow-hidden rounded-t-2xl p-4 sm:h-60">
-                    <div aria-hidden className="ax-dots absolute inset-0 opacity-55" />
+                  <div className="facet-stage relative flex h-56 items-center justify-center overflow-hidden rounded-t-2xl p-4 sm:h-60">
+                    <div aria-hidden className="facet-dots absolute inset-0 opacity-55" />
                     {e.family === "ambience" ? (
                       /* ambience demos are backgrounds — seat a wallpaper
                          preview on them so the tile reads as a scene */
@@ -211,7 +211,7 @@ export function Catalogue({
                               draggable={false}
                               className="h-full w-full object-cover"
                             />
-                            <span className="absolute inset-x-0 bottom-0 bg-black/55 py-1 text-center ax-label text-white/85 backdrop-blur-sm">
+                            <span className="absolute inset-x-0 bottom-0 bg-black/55 py-1 text-center facet-label text-white/85 backdrop-blur-sm">
                               {e.name}
                             </span>
                           </span>
@@ -223,7 +223,7 @@ export function Catalogue({
                       </div>
                     )}
                     {e.isNew && (
-                      <span className="absolute left-4 top-4 rounded-md bg-indigo-500/15 px-2 py-1 ax-label text-indigo-300 ring-1 ring-indigo-400/30 backdrop-blur-sm">
+                      <span className="absolute left-4 top-4 rounded-md bg-indigo-500/15 px-2 py-1 facet-label text-indigo-300 ring-1 ring-indigo-400/30 backdrop-blur-sm">
                         new
                       </span>
                     )}
@@ -231,7 +231,7 @@ export function Catalogue({
                   {/* footer */}
                   <div className="flex flex-1 items-start justify-between gap-4 p-5">
                     <div className="min-w-0">
-                      <p className="ax-label text-muted-foreground dark:text-foreground/60">{e.family}</p>
+                      <p className="facet-label text-muted-foreground dark:text-foreground/60">{e.family}</p>
                       <h2 className="mt-2 text-[15px] font-semibold tracking-tight text-foreground">
                         {e.name}
                       </h2>
@@ -311,7 +311,7 @@ function SideItem({
         />
       )}
       <span className="min-w-0 truncate tracking-tight">{label}</span>
-      <span className="font-mono text-[10px] tabular-nums leading-none text-muted-foreground/80">
+      <span className="font-mono text-[10px] tabular-nums leading-none text-muted-foreground">
         {count}
       </span>
     </Link>

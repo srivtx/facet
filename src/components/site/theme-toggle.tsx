@@ -1,6 +1,6 @@
 "use client";
 
-/* axiom / theme toggle — the shadcn-blessed sun/moon crossfade swap.
+/* Facet / theme toggle — the shadcn-blessed sun/moon crossfade swap.
    Rendered icons are CSS-swapped, so there is no hydration state to guard. */
 
 import React from "react";

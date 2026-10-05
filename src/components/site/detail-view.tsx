@@ -1,6 +1,6 @@
 "use client";
 
-/* axiom / detail view — the dedicated component page. Real URL,
+/* Facet / detail view — the dedicated component page. Real URL,
    shareable, keyboard-first: Esc returns to the catalogue, arrows
    walk the index. The stage stays a dark island in both themes. */
 
@@ -18,7 +18,7 @@ import {
   X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { DemoStage, StageTicks } from "@/components/ax/stage";
+import { DemoStage, StageTicks } from "@/components/facet/stage";
 import {
   entryPath,
   familyLabel,
@@ -76,7 +76,7 @@ export function DetailView({
   return (
     <div className="relative flex min-h-svh flex-col bg-background">
       {/* ambient field behind the article */}
-      <div aria-hidden className="ax-noise pointer-events-none absolute inset-0" />
+      <div aria-hidden className="facet-noise pointer-events-none absolute inset-0" />
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 h-[60vh]"
@@ -102,7 +102,7 @@ export function DetailView({
             <div className="min-w-0">
               <nav
                 aria-label="Breadcrumb"
-                className="flex flex-wrap items-center gap-2 ax-label text-muted-foreground"
+                className="flex flex-wrap items-center gap-2 facet-label text-muted-foreground"
               >
                 <Link
                   href="/library"
@@ -125,14 +125,14 @@ export function DetailView({
                   {entry.name}
                 </h1>
                 {entry.isNew && (
-                  <span className="rounded-md bg-violet-500/10 px-2 py-1 ax-label text-violet-500 ring-1 ring-violet-500/30 dark:text-violet-300">
+                  <span className="rounded-md bg-violet-500/10 px-2 py-1 facet-label text-violet-500 ring-1 ring-violet-500/30 dark:text-violet-300">
                     new
                   </span>
                 )}
-                <span className="rounded-md bg-primary/10 px-2 py-1 ax-label text-primary ring-1 ring-primary/30">
+                <span className="rounded-md bg-primary/10 px-2 py-1 facet-label text-primary ring-1 ring-primary/30">
                   {familyLabel(entry.family)}
                 </span>
-                <span className="ax-label text-muted-foreground">
+                <span className="facet-label text-muted-foreground">
                   {entry.variants.length} forms
                 </span>
               </div>
@@ -162,15 +162,15 @@ export function DetailView({
                   ))}
                 </div>
                 <span className="flex h-6 min-w-0 flex-1 items-center truncate rounded-md bg-white/[0.04] px-3 font-mono text-[11px] leading-none text-neutral-400">
-                  axiom://library/{entry.family}/{entry.id}?v={variant}
+                  Facet://library/{entry.family}/{entry.id}?v={variant}
                 </span>
-                <span className="hidden items-center gap-1.5 ax-label text-white/50 sm:flex">
+                <span className="hidden items-center gap-1.5 facet-label text-white/50 sm:flex">
                   <span className="size-1.5 animate-pulse rounded-full bg-emerald-400/70" />
                   live
                 </span>
               </div>
-              <div className="ax-stage relative flex min-h-[22rem] items-center justify-center p-5 sm:min-h-[30rem] sm:p-8">
-                <div aria-hidden className="ax-dots absolute inset-0 opacity-60" />
+              <div className="facet-stage relative flex min-h-[22rem] items-center justify-center p-5 sm:min-h-[30rem] sm:p-8">
+                <div aria-hidden className="facet-dots absolute inset-0 opacity-60" />
                 <StageTicks />
                 {/* stage volume — the same bloom the home rows seat
                     behind their clusters; without it the stage is a
@@ -178,16 +178,16 @@ export function DetailView({
                 <div
                   aria-hidden
                   className="pointer-events-none absolute left-1/2 top-1/2 h-80 w-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-80 blur-3xl"
-                  style={{ background: "radial-gradient(circle, var(--ax-glow-a), transparent 62%)" }}
+                  style={{ background: "radial-gradient(circle, var(--facet-glow-a), transparent 62%)" }}
                 />
                 <div className="relative z-10 flex w-full items-center justify-center">
                   <DemoStage comp={entry.id} variant={variant} big />
                 </div>
                 {/* corner chrome — same instrument language as the home rows */}
-                <span className="absolute bottom-6 left-6 flex h-4 items-center ax-label text-white/55">
+                <span className="absolute bottom-6 left-6 flex h-4 items-center facet-label text-white/55">
                   {entry.family} / {entry.id}
                 </span>
-                <span className="absolute bottom-6 right-6 flex h-4 items-center gap-2 ax-label text-white/55">
+                <span className="absolute bottom-6 right-6 flex h-4 items-center gap-2 facet-label text-white/55">
                   <span className="size-1.5 animate-pulse rounded-full bg-emerald-400/70" />
                   live
                 </span>
@@ -244,7 +244,7 @@ export function DetailView({
               </div>
               {/* related */}
               <div className="mt-2">
-                <p className="ax-label text-muted-foreground">pairs with</p>
+                <p className="facet-label text-muted-foreground">pairs with</p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {rel.map((r) => (
                     <Link
@@ -262,7 +262,7 @@ export function DetailView({
 
             {/* install card */}
             <aside className="flex flex-col gap-3 rounded-xl bg-secondary p-4 ring-1 ring-border lg:mt-0">
-              <p className="ax-label text-muted-foreground">use it</p>
+              <p className="facet-label text-muted-foreground">use it</p>
               <p className="text-xs leading-relaxed text-muted-foreground">
                 Copy the primitive into your project — it is self-contained.
                 Reads tokens from the stylesheet, no asset files.
@@ -347,7 +347,7 @@ function StepLink({ dir, target }: { dir: "prev" | "next"; target: AxiomEntry | 
       href={entryPath(target)}
       className="group/step flex min-w-0 flex-1 flex-col gap-1 rounded-lg px-3 py-2.5 transition-colors hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:w-auto"
     >
-      <span className="flex items-center gap-1.5 ax-label text-muted-foreground/70">
+      <span className="flex items-center gap-1.5 facet-label text-muted-foreground/70">
         {isPrev ? <ArrowLeft className="size-3" /> : null}
         {dir}
         <span className="hidden rounded border border-border px-1 py-px font-mono text-[9px] leading-none text-muted-foreground/60 group-hover/step:border-ring/50 md:inline">

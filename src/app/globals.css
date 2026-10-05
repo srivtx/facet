@@ -55,57 +55,57 @@
   --ring: rgba(124, 58, 237, 0.45);
 
   /* signature hues — one step deeper in light (600 band) */
-  --ax-violet: #7c3aed;
-  --ax-fuchsia: #c026d3;
-  --ax-iris: #8b5cf6;
-  --ax-amber: #d97706;
-  --ax-teal: #0d9488;
+  --facet-violet: #7c3aed;
+  --facet-fuchsia: #c026d3;
+  --facet-iris: #8b5cf6;
+  --facet-amber: #d97706;
+  --facet-teal: #0d9488;
 
   /* elevation surfaces */
-  --ax-panel: #ffffff;
-  --ax-raised: #f4f4f6;
-  --ax-deep: #eeedf3;
+  --facet-panel: #ffffff;
+  --facet-raised: #f4f4f6;
+  --facet-deep: #eeedf3;
 
   /* effect channels — the tokens flip, the geometry never does */
-  --ax-grid-line: rgba(23, 23, 28, 0.035);
-  --ax-dots-dot: rgba(23, 23, 28, 0.13);
-  --ax-rule-line: rgba(23, 23, 28, 0.1);
-  --ax-glow-a: rgba(79, 70, 229, 0.13);
-  --ax-glow-b: rgba(14, 165, 233, 0.09);
-  --ax-grad-1: #4f46e5;
-  --ax-grad-2: #7c3aed;
-  --ax-grad-3: #0284c7;
-  --ax-noise-opacity: 0.04;
-  --ax-noise-blend: multiply;
+  --facet-grid-line: rgba(23, 23, 28, 0.035);
+  --facet-dots-dot: rgba(23, 23, 28, 0.13);
+  --facet-rule-line: rgba(23, 23, 28, 0.1);
+  --facet-glow-a: rgba(79, 70, 229, 0.13);
+  --facet-glow-b: rgba(14, 165, 233, 0.09);
+  --facet-grad-1: #4f46e5;
+  --facet-grad-2: #7c3aed;
+  --facet-grad-3: #0284c7;
+  --facet-noise-opacity: 0.04;
+  --facet-noise-blend: multiply;
 
   /* material system — frosted glass, light halos, gradient rims,
      passing sheen, photographic grain, cursor spotlight */
-  --ax-halo-a: rgba(99, 102, 241, 0.16);
-  --ax-halo-b: rgba(56, 189, 248, 0.12);
-  --ax-glass-bg: rgba(255, 255, 255, 0.8);
-  --ax-glass-line: rgba(23, 23, 28, 0.09);
-  --ax-glass-top: rgba(255, 255, 255, 0.95);
-  --ax-glass-float:
+  --facet-halo-a: rgba(99, 102, 241, 0.16);
+  --facet-halo-b: rgba(56, 189, 248, 0.12);
+  --facet-glass-bg: rgba(255, 255, 255, 0.8);
+  --facet-glass-line: rgba(23, 23, 28, 0.09);
+  --facet-glass-top: rgba(255, 255, 255, 0.95);
+  --facet-glass-float:
     0 1px 2px rgba(23, 23, 28, 0.06),
     0 12px 32px -12px rgba(23, 23, 28, 0.14),
     0 32px 64px -32px rgba(23, 23, 28, 0.24);
-  --ax-rim-top: rgba(255, 255, 255, 0.95);
-  --ax-rim-bot: rgba(79, 70, 229, 0.24);
-  --ax-sheen: rgba(255, 255, 255, 0.3);
-  --ax-spot: rgba(99, 102, 241, 0.09);
-  --ax-grain: 0.026;
-  --ax-scrollbar: rgba(23, 23, 28, 0.18);
+  --facet-rim-top: rgba(255, 255, 255, 0.95);
+  --facet-rim-bot: rgba(79, 70, 229, 0.24);
+  --facet-sheen: rgba(255, 255, 255, 0.3);
+  --facet-spot: rgba(99, 102, 241, 0.09);
+  --facet-grain: 0.026;
+  --facet-scrollbar: rgba(23, 23, 28, 0.18);
   --selection-bg: rgba(124, 58, 237, 0.18);
   --selection-fg: #17171c;
 
   /* dark demo islands get seated (ring + layered drop shadow) on paper */
-  --ax-stage-seat:
+  --facet-stage-seat:
     0 1px 2px rgba(23, 23, 28, 0.1),
     0 8px 24px -8px rgba(23, 23, 28, 0.14),
     0 24px 64px -24px rgba(23, 23, 28, 0.22),
     0 0 0 1px rgba(23, 23, 28, 0.08);
-  --ax-band: #f4f4f6;
-  --ax-band-border: rgba(23, 23, 28, 0.08);
+  --facet-band: #f4f4f6;
+  --facet-band-border: rgba(23, 23, 28, 0.08);
 }
 
 /* ── dark theme — near-black with a violet cast (the original) ── */
@@ -133,55 +133,55 @@
   --input: rgba(255, 255, 255, 0.1);
   --ring: rgba(167, 139, 250, 0.55);
 
-  --ax-violet: #8b5cf6;
-  --ax-fuchsia: #e879f9;
-  --ax-iris: #a78bfa;
-  --ax-amber: #fbbf24;
-  --ax-teal: #2dd4bf;
+  --facet-violet: #8b5cf6;
+  --facet-fuchsia: #e879f9;
+  --facet-iris: #a78bfa;
+  --facet-amber: #fbbf24;
+  --facet-teal: #2dd4bf;
 
-  --ax-panel: #0a0c16;
-  --ax-raised: #10121e;
-  --ax-deep: #08090f;
+  --facet-panel: #0a0c16;
+  --facet-raised: #10121e;
+  --facet-deep: #08090f;
 
-  --ax-grid-line: rgba(255, 255, 255, 0.05);
-  --ax-dots-dot: rgba(255, 255, 255, 0.09);
-  --ax-rule-line: rgba(255, 255, 255, 0.14);
-  --ax-glow-a: rgba(99, 102, 241, 0.4);
-  --ax-glow-b: rgba(56, 189, 248, 0.26);
-  --ax-grad-1: #818cf8;
-  --ax-grad-2: #a78bfa;
-  --ax-grad-3: #7dd3fc;
-  --ax-noise-opacity: 0.032;
-  --ax-noise-blend: normal;
+  --facet-grid-line: rgba(255, 255, 255, 0.05);
+  --facet-dots-dot: rgba(255, 255, 255, 0.09);
+  --facet-rule-line: rgba(255, 255, 255, 0.14);
+  --facet-glow-a: rgba(99, 102, 241, 0.4);
+  --facet-glow-b: rgba(56, 189, 248, 0.26);
+  --facet-grad-1: #818cf8;
+  --facet-grad-2: #a78bfa;
+  --facet-grad-3: #7dd3fc;
+  --facet-noise-opacity: 0.032;
+  --facet-noise-blend: normal;
 
   /* material system — smoked glass, luminous halos, violet sheen.
      Dark values read as light sources on a dark field. */
-  --ax-halo-a: rgba(139, 92, 246, 0.24);
-  --ax-halo-b: rgba(56, 189, 248, 0.16);
-  --ax-glass-bg: rgba(20, 22, 38, 0.75);
-  --ax-glass-line: rgba(255, 255, 255, 0.13);
-  --ax-glass-top: rgba(255, 255, 255, 0.2);
-  --ax-glass-float:
+  --facet-halo-a: rgba(139, 92, 246, 0.24);
+  --facet-halo-b: rgba(56, 189, 248, 0.16);
+  --facet-glass-bg: rgba(20, 22, 38, 0.75);
+  --facet-glass-line: rgba(255, 255, 255, 0.13);
+  --facet-glass-top: rgba(255, 255, 255, 0.2);
+  --facet-glass-float:
     0 1px 2px rgba(0, 0, 0, 0.4),
     0 16px 40px -16px rgba(0, 0, 0, 0.65),
     0 32px 80px -36px rgba(0, 0, 0, 0.8);
-  --ax-rim-top: rgba(255, 255, 255, 0.15);
-  --ax-rim-bot: rgba(139, 92, 246, 0.32);
-  --ax-sheen: rgba(139, 92, 246, 0.32);
-  --ax-spot: rgba(255, 255, 255, 0.07);
-  --ax-grain: 0.032;
-  --ax-scrollbar: rgba(255, 255, 255, 0.12);
+  --facet-rim-top: rgba(255, 255, 255, 0.15);
+  --facet-rim-bot: rgba(139, 92, 246, 0.32);
+  --facet-sheen: rgba(139, 92, 246, 0.32);
+  --facet-spot: rgba(255, 255, 255, 0.07);
+  --facet-grain: 0.032;
+  --facet-scrollbar: rgba(255, 255, 255, 0.12);
   --selection-bg: rgba(139, 92, 246, 0.35);
   --selection-fg: #ffffff;
 
   /* deep elevation + rim hairline — dark islands over the dark page */
-  --ax-stage-seat:
+  --facet-stage-seat:
     0 0 0 1px rgba(255, 255, 255, 0.08),
     0 1px 2px rgba(0, 0, 0, 0.4),
     0 16px 48px -16px rgba(0, 0, 0, 0.7),
     0 32px 96px -40px rgba(0, 0, 0, 0.75);
-  --ax-band: #070911;
-  --ax-band-border: rgba(255, 255, 255, 0.06);
+  --facet-band: #070911;
+  --facet-band-border: rgba(255, 255, 255, 0.06);
 }
 
 @layer base {
@@ -205,7 +205,7 @@
     inset: 0;
     z-index: 90;
     pointer-events: none;
-    opacity: var(--ax-grain);
+    opacity: var(--facet-grain);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='gn'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23gn)'/%3E%3C/svg%3E");
   }
   h1, h2, h3 {
@@ -217,13 +217,13 @@
   }
 }
 
-/* ─────────────────────────  axiom utilities  ───────────────────────── */
+/* ─────────────────────────  facet utilities  ───────────────────────── */
 
 /* ── micro-typography system ─────────────────────────────
    One label language for the whole site. Every mono eyebrow,
    corner chrome tag and metadata badge routes through these two
    classes — no per-instance tracking values. */
-.ax-label {
+.facet-label {
   font-family: var(--font-mono);
   font-size: 10px;
   line-height: 1.2;
@@ -231,7 +231,7 @@
   text-transform: uppercase;
   letter-spacing: 0.16em;
 }
-.ax-eyebrow {
+.facet-eyebrow {
   font-family: var(--font-mono);
   font-size: 11px;
   line-height: 1.2;
@@ -241,29 +241,29 @@
 }
 
 /* hairline gradient separator used between sections */
-.ax-rule {
+.facet-rule {
   height: 1px;
   background: linear-gradient(
     90deg,
     transparent,
-    var(--ax-rule-line) 20%,
-    var(--ax-rule-line) 80%,
+    var(--facet-rule-line) 20%,
+    var(--facet-rule-line) 80%,
     transparent
   );
 }
 
 /* 1px grid, masked so it dies before the edges */
-.ax-grid {
+.facet-grid {
   background-image:
-    linear-gradient(to right, var(--ax-grid-line) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--ax-grid-line) 1px, transparent 1px);
+    linear-gradient(to right, var(--facet-grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--facet-grid-line) 1px, transparent 1px);
   background-size: 72px 72px;
   -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 40%, black 30%, transparent 78%);
   mask-image: radial-gradient(ellipse 90% 80% at 50% 40%, black 30%, transparent 78%);
 }
 
 /* the same grid for dark islands (CTA panel, dark bands) — lines stay white */
-.ax-gridlite {
+.facet-gridlite {
   background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
@@ -273,7 +273,7 @@
 }
 
 /* fine dotted texture for demo stages (stages stay dark, so white dots) */
-.ax-dots {
+.facet-dots {
   background-image: radial-gradient(rgba(255, 255, 255, 0.09) 1px, transparent 1px);
   background-size: 18px 18px;
 }
@@ -281,7 +281,7 @@
 /* tick ruler — the measurement strip along a stage's bottom edge.
    1px ticks every 20px, a long tick every 100px, fading at both
    ends so it reads as an instrument scale, not a border. */
-.ax-ruler {
+.facet-ruler {
   height: 5px;
   background-image:
     linear-gradient(90deg, rgba(255, 255, 255, 0.34) 0 1px, transparent 1px 100px),
@@ -291,55 +291,55 @@
 }
 
 /* film grain overlay */
-.ax-noise {
+.facet-noise {
   position: relative;
 }
-.ax-noise::after {
+.facet-noise::after {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: var(--ax-noise-opacity);
-  mix-blend-mode: var(--ax-noise-blend);
+  opacity: var(--facet-noise-opacity);
+  mix-blend-mode: var(--facet-noise-blend);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'%3E%3C/svg%3E");
 }
 
 /* ── glass material ───────────────────────────────────
    Frosted panes for floating UI: smoked glass on the dark page,
-   frosted white on paper. Seat an .ax-halo BEHIND the pane (as a
+   frosted white on paper. Seat an .facet-halo BEHIND the pane (as a
    preceding sibling inside a relative wrapper) so the pane's own
    backdrop-filter blurs the glow into the glass. */
-.ax-glass {
-  background: var(--ax-glass-bg);
+.facet-glass {
+  background: var(--facet-glass-bg);
   -webkit-backdrop-filter: blur(16px) saturate(1.4);
   backdrop-filter: blur(16px) saturate(1.4);
   box-shadow:
-    inset 0 1px 0 var(--ax-glass-top),
-    0 0 0 1px var(--ax-glass-line),
-    var(--ax-glass-float);
+    inset 0 1px 0 var(--facet-glass-top),
+    0 0 0 1px var(--facet-glass-line),
+    var(--facet-glass-float);
 }
 
 /* ── halo — a light source behind an element ────────
    Absolutely positioned sibling with negative z-index: paints
    above its stacking-context ancestor's background, below the
-   pane it backs. Color via --ax-halo (defaults violet). */
-.ax-halo {
+   pane it backs. Color via --facet-halo (defaults violet). */
+.facet-halo {
   position: absolute;
   inset: -32%;
   border-radius: 9999px;
   pointer-events: none;
   z-index: -1;
-  background: radial-gradient(circle, var(--ax-halo, var(--ax-halo-a)), transparent 62%);
+  background: radial-gradient(circle, var(--facet-halo, var(--facet-halo-a)), transparent 62%);
   filter: blur(40px);
 }
 
 /* ── hairline — light-catching gradient rim ───────
    1px rim that catches light along the top and passes a violet
    tint at the foot. Replaces flat borders on cards and panes. */
-.ax-hairline {
+.facet-hairline {
   position: relative;
 }
-.ax-hairline::after {
+.facet-hairline::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -348,10 +348,10 @@
   pointer-events: none;
   background: linear-gradient(
     165deg,
-    var(--ax-rim-top),
+    var(--facet-rim-top),
     transparent 36%,
     transparent 62%,
-    var(--ax-rim-bot)
+    var(--facet-rim-bot)
   );
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
@@ -366,11 +366,11 @@
 /* ── sheen — a passing light across CTAs ────────
    One sweep every ~7s, delayed so it never competes with
    the entrance animation. */
-.ax-sheen {
+.facet-sheen {
   position: relative;
   overflow: hidden;
 }
-.ax-sheen::after {
+.facet-sheen::after {
   content: "";
   position: absolute;
   top: -20%;
@@ -378,12 +378,12 @@
   left: -45%;
   width: 34%;
   pointer-events: none;
-  background: linear-gradient(100deg, transparent, var(--ax-sheen), transparent);
+  background: linear-gradient(100deg, transparent, var(--facet-sheen), transparent);
   transform: skewX(-16deg);
-  animation: ax-sheen-pass 7s cubic-bezier(0.6, 0, 0.35, 1) infinite;
+  animation: facet-sheen-pass 7s cubic-bezier(0.6, 0, 0.35, 1) infinite;
   animation-delay: 1.6s;
 }
-@keyframes ax-sheen-pass {
+@keyframes facet-sheen-pass {
   0%, 52% { left: -45%; }
   100% { left: 115%; }
 }
@@ -391,10 +391,10 @@
 /* ── spotlight — cursor-tracked radial on cards ──
    Host sets --mx/--my (px) from pointer events; the glow rides
    the cursor across the whole card, over the demo tile too. */
-.ax-spot {
+.facet-spot {
   position: relative;
 }
-.ax-spot::before {
+.facet-spot::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -405,12 +405,12 @@
   transition: opacity 0.35s ease;
   background: radial-gradient(
     320px circle at var(--mx, 50%) var(--my, 50%),
-    var(--ax-spot),
+    var(--facet-spot),
     transparent 65%
   );
 }
-.ax-spot:hover::before,
-.ax-spot:focus-visible::before {
+.facet-spot:hover::before,
+.facet-spot:focus-visible::before {
   opacity: 1;
 }
 
@@ -419,14 +419,14 @@
    in both directions; hue travel indigo→violet→sky, no neon.
    Descender guard: tight leading + background-clip clips g/y/p
    tails, so pad the box and pull the following line back up. */
-.ax-grad {
+.facet-grad {
   background: linear-gradient(
     104deg,
-    var(--ax-grad-1),
-    var(--ax-grad-2) 34%,
-    var(--ax-grad-3) 58%,
-    var(--ax-grad-2) 82%,
-    var(--ax-grad-1)
+    var(--facet-grad-1),
+    var(--facet-grad-2) 34%,
+    var(--facet-grad-3) 58%,
+    var(--facet-grad-2) 82%,
+    var(--facet-grad-1)
   );
   background-size: 300% 100%;
   -webkit-background-clip: text;
@@ -434,96 +434,125 @@
   color: transparent;
   padding-bottom: 0.08em;
   margin-bottom: -0.08em;
-  animation: ax-grad-drift 10s ease-in-out infinite;
+  animation: facet-grad-drift 10s ease-in-out infinite;
 }
-@keyframes ax-grad-drift {
+@keyframes facet-grad-drift {
   0%, 100% { background-position: 0% 0; }
   50% { background-position: 100% 0; }
 }
 
 /* soft aurora glows — the single ambient loop of the page */
-.ax-aurora {
+.facet-aurora {
   position: absolute;
   inset: 0;
   overflow: hidden;
   pointer-events: none;
 }
-.ax-aurora::before,
-.ax-aurora::after {
+.facet-aurora::before,
+.facet-aurora::after {
   content: "";
   position: absolute;
   border-radius: 9999px;
   filter: blur(110px);
 }
-.ax-aurora::before {
+.facet-aurora::before {
   width: 720px;
   height: 720px;
   top: -340px;
   left: 50%;
   translate: -50% 0;
-  background: radial-gradient(circle, var(--ax-glow-a), transparent 65%);
-  animation: ax-breathe-a 26s ease-in-out infinite;
+  background: radial-gradient(circle, var(--facet-glow-a), transparent 65%);
+  animation: facet-breathe-a 26s ease-in-out infinite;
 }
-.ax-aurora::after {
+.facet-aurora::after {
   width: 560px;
   height: 560px;
   bottom: -320px;
   left: 30%;
-  background: radial-gradient(circle, var(--ax-glow-b), transparent 65%);
-  animation: ax-breathe-b 34s ease-in-out infinite;
+  background: radial-gradient(circle, var(--facet-glow-b), transparent 65%);
+  animation: facet-breathe-b 34s ease-in-out infinite;
 }
 
-@keyframes ax-breathe-a {
+@keyframes facet-breathe-a {
   0%, 100% { transform: translate(-50%, 0) scale(1); opacity: 1; }
   50% { transform: translate(-46%, 40px) scale(1.12); opacity: 1; }
 }
-@keyframes ax-breathe-b {
+@keyframes facet-breathe-b {
   0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.95; }
   50% { transform: translate(60px, -30px) scale(1.15); opacity: 1; }
 }
 
 /* slow marquee */
-.ax-marquee {
-  animation: ax-marquee 42s linear infinite;
+.facet-marquee {
+  animation: facet-marquee 42s linear infinite;
 }
-.ax-marquee-rev {
-  animation: ax-marquee 42s linear infinite reverse;
+.facet-marquee-rev {
+  animation: facet-marquee 42s linear infinite reverse;
 }
-.ax-marquee-host:hover .ax-marquee,
-.ax-marquee-host:hover .ax-marquee-rev,
-.ax-marquee-host:focus-within .ax-marquee,
-.ax-marquee-host:focus-within .ax-marquee-rev {
+.facet-marquee-host:hover .facet-marquee,
+.facet-marquee-host:hover .facet-marquee-rev,
+.facet-marquee-host:focus-within .facet-marquee,
+.facet-marquee-host:focus-within .facet-marquee-rev {
   animation-play-state: paused;
 }
-@keyframes ax-marquee {
+@keyframes facet-marquee {
   to { transform: translateX(-50%); }
 }
 
 /* gentle float for hero cube */
-@keyframes ax-float {
+@keyframes facet-float {
   0%, 100% { transform: translateY(-6px); }
   50% { transform: translateY(10px); }
 }
 
+/* terminal caret for the hero manifest strip */
+@keyframes facet-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* slow counter-rotation for the hero's two colour fields. Rotating a blurred
+   conic reads as drifting light; translating it just slides the gradient. */
+@keyframes facet-drift-a {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.12); }
+}
+@keyframes facet-drift-b {
+  0%, 100% { transform: rotate(0deg) scale(1.08); }
+  50% { transform: rotate(-180deg) scale(1); }
+}
+
 /* beam border — gradient fillet riding the outline on an offset-path */
-.ax-beam {
+.facet-beam {
   position: absolute;
   inset: 0;
   border-radius: inherit;
   pointer-events: none;
   overflow: hidden;
+  z-index: 0;
 }
-.ax-beam::before {
+/* A soft travelling glow, not a hard square. offset-rotate follows the path
+   tangent, so at a rounded corner any hard-edged fill is rotated ~45deg and
+   reads as a solid diamond glitch clipped by the parent's radius. A blurred
+   radial has no silhouette to rotate, so it stays a comet the whole way round. */
+.facet-beam::before {
   content: "";
   position: absolute;
-  width: 42px;
+  width: 56px;
   aspect-ratio: 1;
-  background: linear-gradient(to left, var(--ax-violet), var(--ax-fuchsia), transparent);
-  animation: ax-beam-move var(--beam-dur, 6s) linear infinite;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    color-mix(in oklab, var(--facet-fuchsia) 88%, transparent) 0%,
+    color-mix(in oklab, var(--facet-violet) 52%, transparent) 36%,
+    transparent 70%
+  );
+  filter: blur(5px);
+  animation: facet-beam-move var(--beam-dur, 6s) linear infinite;
   offset-path: rect(0 auto auto 0 round 999px);
   offset-anchor: 50% 50%;
 }
-@keyframes ax-beam-move {
+@keyframes facet-beam-move {
   100% { offset-distance: 100%; }
 }
 
@@ -532,7 +561,7 @@
    never re-tuned per theme. Volumetric recipe: an indigo sky
    entering from above, a sky-blue horizon below, and an inset
    top light — the surface reads as lit space, not a black hole. */
-.ax-stage {
+.facet-stage {
   background:
     radial-gradient(ellipse 120% 90% at 50% 118%, rgba(56, 189, 248, 0.14), transparent 62%),
     radial-gradient(ellipse 90% 70% at 50% -12%, rgba(99, 102, 241, 0.22), transparent 58%),
@@ -540,7 +569,7 @@
 }
 /* inset top light — reads as a lit ceiling, painted under the
    children (pseudo-element precedes them in paint order) */
-.ax-stage::before {
+.facet-stage::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -553,38 +582,141 @@
    gives them altitude over the dark page. NOTE: the ring lives
    inside the token (last layer) because this unlayered rule
    intentionally overrides the tailwind ring/shadow chain —
-   don't pair .ax-seat with ring- utilities. */
-.ax-seat {
-  box-shadow: var(--ax-stage-seat);
+   don't pair .facet-seat with ring- utilities. */
+.facet-seat {
+  box-shadow: var(--facet-stage-seat);
 }
 
 /* page-level band tint (marquee, dimension band, footer) */
-.ax-band {
-  background: var(--ax-band);
-  border-color: var(--ax-band-border);
+.facet-band {
+  background: var(--facet-band);
+  border-color: var(--facet-band-border);
 }
 
 /* scrollbar polish for long lists */
-.ax-scroll::-webkit-scrollbar {
+.facet-scroll::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
-.ax-scroll::-webkit-scrollbar-thumb {
-  background: var(--ax-scrollbar);
+.facet-scroll::-webkit-scrollbar-thumb {
+  background: var(--facet-scrollbar);
   border-radius: 8px;
 }
-.ax-scroll::-webkit-scrollbar-track {
+.facet-scroll::-webkit-scrollbar-track {
   background: transparent;
 }
 
+/* ══════════════════════════════════════════════════════════════════════
+   ACETERNITY REGISTRY PRIMITIVES
+   Keyframes + animation utilities required by the vendored components in
+   src/components/facet/aceternity/. Namespaced `facet-ac-*` to stay clear of the
+   hand-authored `facet-*` motion system above.
+   ══════════════════════════════════════════════════════════════════════ */
+@theme {
+  --animate-facet-ac-meteor: facet-ac-meteor 5s linear infinite;
+  --animate-facet-ac-spotlight: facet-ac-spotlight 2s cubic-bezier(0.4, 0, 0.2, 1) 0.75s 1 forwards;
+  --animate-facet-ac-aurora: facet-ac-aurora 6s ease-in-out infinite;
+  --animate-facet-ac-scroll: facet-ac-scroll var(--animation-duration, 40s) linear infinite;
+  --animate-facet-ac-cell-ripple: facet-ac-cell-ripple var(--duration, 600ms) ease-out var(--delay, 0ms) 1;
+
+  --animate-facet-ac-grad-first: facet-ac-grad-first 18s ease-in-out infinite;
+  --animate-facet-ac-grad-second: facet-ac-grad-second 18s ease-in-out infinite;
+  --animate-facet-ac-grad-third: facet-ac-grad-third 18s ease-in-out infinite;
+  --animate-facet-ac-grad-fourth: facet-ac-grad-fourth 20s ease-in-out infinite;
+  --animate-facet-ac-grad-fifth: facet-ac-grad-fifth 20s ease-in-out infinite;
+}
+
+@keyframes facet-ac-meteor {
+  0% { transform: rotate(215deg) translateX(0); opacity: 1; }
+  70% { opacity: 1; }
+  100% { transform: rotate(215deg) translateX(-500px); opacity: 0; }
+}
+
+@keyframes facet-ac-spotlight {
+  0% { opacity: 0; transform: translate(-72%, -62%) scale(0.5); }
+  100% { opacity: 1; transform: translate(-50%, -40%) scale(1); }
+}
+
+@keyframes facet-ac-aurora {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes facet-ac-scroll {
+  to { transform: translateX(calc(-50% - var(--gap, 1rem) / 2)); }
+}
+
+@keyframes facet-ac-cell-ripple {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes facet-ac-grad-first {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(0, 0) rotate(2deg); }
+}
+@keyframes facet-ac-grad-second {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-50px, 0) rotate(-2deg); }
+}
+@keyframes facet-ac-grad-third {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(50px, 0) rotate(2deg); }
+}
+@keyframes facet-ac-grad-fourth {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-50px, 0) scale(1.1); }
+}
+@keyframes facet-ac-grad-fifth {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(50px, 0) scale(1.1); }
+}
+
+/* infinite-moving-cards ships its own layout contract on `.scroller` */
+.scroller ul { list-style: none; margin: 0; padding: 0; }
+.scroller li { flex-shrink: 0; }
+
 @media (prefers-reduced-motion: reduce) {
-  .ax-marquee,
-  .ax-marquee-rev,
-  .ax-aurora::before,
-  .ax-aurora::after,
-  .ax-beam::before,
-  .ax-grad,
-  .ax-sheen::after {
-    animation: none;
+  /* Safety net for every loop the explicit list below does not name. The demo
+     primitives under src/components/ax carry their own keyframes — facet-orb,
+     facet-drift-*, facet-veil-*, facet-flip, ktl-*, pulse and friends — and an
+     animation-name list can never stay ahead of them.
+
+     Clamping duration and iteration count, rather than `animation: none`, is
+     deliberate: plenty of these reveals keep their visible state in the
+     animation's FINAL frame, so cancelling outright would snap them back to
+     opacity 0 and hide the content. Clamped, they land on that final frame
+     immediately and simply stop. */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* ...and the handful whose resting state is the correct reduced-motion
+     state, cancelled outright. animation-name carries the !important so it
+     outranks the duration clamp above (name: none runs nothing at all). */
+  .facet-marquee,
+  .facet-marquee-rev,
+  .facet-aurora::before,
+  .facet-aurora::after,
+  .facet-beam::before,
+  .facet-grad,
+  .facet-sheen::after {
+    animation: none !important;
+  }
+  .animate-ax-ac-meteor,
+  .animate-ax-ac-aurora,
+  .animate-ax-ac-scroll,
+  .animate-ax-ac-grad-first,
+  .animate-ax-ac-grad-second,
+  .animate-ax-ac-grad-third,
+  .animate-ax-ac-grad-fourth,
+  .animate-ax-ac-grad-fifth {
+    animation: none !important;
   }
 }

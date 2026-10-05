@@ -1,6 +1,6 @@
 "use client";
 
-/* axiom / browse strip — the quiet closer. One card, one link:
+/* Facet / browse strip — the quiet closer. One card, one link:
    the rest of the catalogue. No band, no confetti. */
 
 import React from "react";
@@ -23,7 +23,7 @@ export function BrowseStrip() {
           className="group flex flex-wrap items-center justify-between gap-4 rounded-2xl bg-card p-6 ring-1 ring-border shadow-sm transition-all duration-200 hover:shadow-md hover:ring-ring/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:p-7"
         >
           <div className="min-w-0">
-            <p className="ax-label text-primary">
+            <p className="facet-label text-primary">
               the rest of the library
             </p>
             <h2 className="mt-2 text-balance text-xl font-semibold tracking-tight text-foreground sm:text-2xl">

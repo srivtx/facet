@@ -1,6 +1,6 @@
 "use client";
 
-/* axiom / hero — copy left, a floating instrument cluster right.
+/* Facet / hero — copy left, a floating instrument cluster right.
    No stage box: the cluster sits in open space on the page's own
    atmosphere. Every pane is glass with its own halo behind it, the
    whole field answers the pointer in depth, and each pane rides
@@ -20,8 +20,8 @@ import {
   type MotionValue,
 } from "framer-motion";
 import { ArrowRight, Github, Star } from "lucide-react";
-import { TiltCard } from "@/components/ax/motion3d";
-import { FlipCycle } from "@/components/ax/textfx";
+import { TiltCard } from "@/components/facet/motion3d";
+import { FlipCycle } from "@/components/facet/textfx";
 import { COUNTS } from "@/lib/registry";
 
 const fade = (delay: number) => ({
@@ -30,9 +30,9 @@ const fade = (delay: number) => ({
   transition: { duration: 0.55, delay, ease: [0.21, 0.6, 0.35, 1] as const },
 });
 
-/* halo color passed to .ax-halo via --ax-halo */
-const HALO_VIOLET = "var(--ax-halo-a)" as const;
-const HALO_SKY = "var(--ax-halo-b)" as const;
+/* halo color passed to .facet-halo via --facet-halo */
+const HALO_VIOLET = "var(--facet-halo-a)" as const;
+const HALO_SKY = "var(--facet-halo-b)" as const;
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -68,14 +68,14 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden">
-      <div aria-hidden className="ax-aurora" />
-      <div aria-hidden className="ax-grid absolute inset-0 opacity-75 sm:opacity-100" />
+      <div aria-hidden className="facet-aurora" />
+      <div aria-hidden className="facet-grid absolute inset-0 opacity-75 sm:opacity-100" />
       {/* horizon — a wide, low sky-tone light seated at the section
           foot. Fills the lower field with atmosphere, not content. */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-[-20%] bottom-[-14%] h-[42%] opacity-90 blur-3xl"
-        style={{ background: "radial-gradient(ellipse 50% 100% at 50% 100%, var(--ax-glow-b), transparent 70%)" }}
+        style={{ background: "radial-gradient(ellipse 50% 100% at 50% 100%, var(--facet-glow-b), transparent 70%)" }}
       />
 
       <div className="relative mx-auto grid min-h-[calc(100svh-4rem)] max-w-7xl items-center gap-12 px-5 pb-24 pt-20 sm:px-6 lg:grid-cols-[44%_56%] lg:gap-0 lg:pb-28 lg:px-10 lg:pt-24">
@@ -106,7 +106,7 @@ export function Hero() {
           >
             Components that
             <br />
-            <span className="ax-grad">demo themselves.</span>
+            <span className="facet-grad">demo themselves.</span>
           </motion.h1>
 
           <motion.p
@@ -121,13 +121,13 @@ export function Hero() {
           <motion.div {...fade(0.24)} className="flex flex-wrap items-center gap-3">
             <Link
               href="/library"
-              className="ax-sheen group inline-flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-foreground px-6 text-[15px] font-semibold text-background shadow-lg shadow-foreground/20 transition-all duration-200 hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring active:scale-[0.98] sm:w-auto"
+              className="facet-sheen group inline-flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-foreground px-6 text-[15px] font-semibold text-background shadow-lg shadow-foreground/20 transition-all duration-200 hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring active:scale-[0.98] sm:w-auto"
             >
               Browse the library
               <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" />
             </Link>
             <a
-              href="https://github.com/srivtx/axiom"
+              href="https://github.com/srivtx/Facet"
               target="_blank"
               rel="noreferrer"
               className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-secondary/80 px-6 text-[15px] font-semibold text-foreground ring-1 ring-border backdrop-blur-md transition-all duration-200 hover:bg-accent hover:ring-foreground/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring active:scale-[0.98] sm:w-auto"
@@ -171,12 +171,12 @@ export function Hero() {
             <div
               aria-hidden
               className="pointer-events-none absolute left-1/2 top-[38%] h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-100 blur-3xl"
-              style={{ background: "radial-gradient(circle, var(--ax-glow-a), transparent 60%)" }}
+              style={{ background: "radial-gradient(circle, var(--facet-glow-a), transparent 60%)" }}
             />
             <div
               aria-hidden
               className="pointer-events-none absolute bottom-[2%] right-[6%] h-56 w-72 rounded-full opacity-90 blur-3xl"
-              style={{ background: "radial-gradient(circle, var(--ax-glow-b), transparent 60%)" }}
+              style={{ background: "radial-gradient(circle, var(--facet-glow-b), transparent 60%)" }}
             />
 
             {/* corner bloom — the upper-left field gets its own
@@ -184,7 +184,7 @@ export function Hero() {
             <div
               aria-hidden
               className="pointer-events-none absolute -left-[10%] -top-[8%] h-80 w-80 rounded-full opacity-60 blur-3xl"
-              style={{ background: "radial-gradient(circle, var(--ax-glow-a), transparent 65%)" }}
+              style={{ background: "radial-gradient(circle, var(--facet-glow-a), transparent 65%)" }}
             />
 
             {/* studio floor — a perspective grid receding below the
@@ -199,7 +199,7 @@ export function Hero() {
                 WebkitMaskImage: "linear-gradient(to bottom, transparent, black 16%, transparent 94%)",
               }}
             >
-              <div className="ax-gridlite absolute inset-0" />
+              <div className="facet-gridlite absolute inset-0" />
             </div>
 
             <motion.div
@@ -217,8 +217,8 @@ export function Hero() {
                   <div className="relative [filter:drop-shadow(0_28px_56px_rgba(0,0,0,0.45))]">
                     <span
                       aria-hidden
-                      className="ax-halo"
-                      style={{ "--ax-halo": HALO_VIOLET } as React.CSSProperties}
+                      className="facet-halo"
+                      style={{ "--facet-halo": HALO_VIOLET } as React.CSSProperties}
                     />
                     <div className="scale-[0.82] sm:scale-[0.92] lg:scale-105">
                       <TiltCard />
@@ -270,8 +270,8 @@ function FieldTile({
   const fx = useTransform(sx, fmt);
   const fy = useTransform(sy, fmt);
   return (
-    <div className={`ax-glass ${compact ? "px-3.5 py-2.5" : "px-4 py-3.5"} rounded-xl`}>
-      <p className="ax-label text-muted-foreground">field</p>
+    <div className={`facet-glass ${compact ? "px-3.5 py-2.5" : "px-4 py-3.5"} rounded-xl`}>
+      <p className="facet-label text-muted-foreground">field</p>
       <div className="mt-2 flex items-center justify-between gap-6 font-mono text-xs tabular-nums font-semibold leading-none">
         <span className="flex items-center gap-1.5">
           <span className="text-muted-foreground/80">x</span>

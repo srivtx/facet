@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "axiom — precision interface primitives",
+  title: "Facet — precision interface primitives",
   description:
     "A living library of motion-grade UI primitives: ambient backgrounds, tactile buttons, kinetic type, isometric stages and more. Light and dark, Vercel-grade product surfaces.",
   keywords: [
-    "axiom",
+    "Facet",
     "ui components",
     "react",
     "next.js",
@@ -29,17 +29,17 @@ export const metadata: Metadata = {
     "dark ui",
     "light ui",
   ],
-  authors: [{ name: "axiom" }],
+  authors: [{ name: "Facet" }],
   openGraph: {
-    title: "axiom — precision interface primitives",
+    title: "Facet — precision interface primitives",
     description:
       "A living library of motion-grade UI primitives, engineered for product surfaces in light and dark.",
-    siteName: "axiom",
+    siteName: "Facet",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "axiom — precision interface primitives",
+    title: "Facet — precision interface primitives",
     description:
       "A living library of motion-grade UI primitives, engineered for product surfaces in light and dark.",
   },

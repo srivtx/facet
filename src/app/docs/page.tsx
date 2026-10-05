@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { COUNTS, FAMILIES, familyPath } from "@/lib/registry";
 
 export const metadata: Metadata = {
-  title: "Docs — getting started with axiom | axiom",
+  title: "Docs — getting started with Facet | Facet",
   description:
     "Setup, the three laws of the library, and how the primitives are organised. Copy a component into your project and ship.",
 };
@@ -18,7 +18,7 @@ const STEPS: { n: string; title: string; body: React.ReactNode }[] = [
         The library ships as source, not as a package — every primitive is
         plain TSX you can read in one sitting.{" "}
         <code className="rounded-md bg-secondary px-1.5 py-0.5 font-mono text-[12px] font-medium text-foreground ring-1 ring-border">
-          git clone github.com/srivtx/axiom
+          git clone github.com/srivtx/facet
         </code>{" "}
         then copy what you need. Nothing installs, nothing updates under you.
       </>
@@ -90,18 +90,18 @@ const TOKENS = [
 
 export default function DocsPage() {
   return (
-    <main className="flex flex-1 flex-col pt-16">
+    <main aria-label="Documentation" className="flex flex-1 flex-col pt-16">
       <div className="mx-auto w-full max-w-3xl px-5 pb-24 pt-14 sm:px-6 sm:pt-20">
         {/* head */}
         <header className="flex flex-col gap-4">
-          <p className="ax-eyebrow text-primary">
+          <p className="facet-eyebrow text-primary">
             documentation
           </p>
           <h1 className="text-balance text-3xl font-semibold tracking-[-0.02em] text-foreground sm:text-4xl">
-            Four steps, three laws, <span className="ax-grad">zero packages</span>.
+            Four steps, three laws, <span className="facet-grad">zero packages</span>.
           </h1>
           <p className="max-w-xl text-sm leading-relaxed text-muted-foreground">
-            axiom is a source library. You read it, you take from it, it never
+            Facet is a source library. You read it, you take from it, it never
             takes from you. {COUNTS.entries} primitives across {COUNTS.families}{" "}
             families, all rendered live on this site — the docs are the product.
           </p>
@@ -114,7 +114,7 @@ export default function DocsPage() {
               key={s.n}
               className="flex gap-5 rounded-2xl bg-card p-6 ring-1 ring-border transition-colors hover:ring-ring/40 sm:p-7"
             >
-              <span className="flex h-6 shrink-0 items-center rounded-md bg-primary/10 px-2 ax-label tabular-nums text-primary ring-1 ring-primary/20">
+              <span className="flex h-6 shrink-0 items-center rounded-md bg-primary/10 px-2 facet-label tabular-nums text-primary ring-1 ring-primary/20">
                 {s.n}
               </span>
               <div className="min-w-0">
@@ -131,16 +131,16 @@ export default function DocsPage() {
 
         {/* laws */}
         <section id="laws" className="mt-16 scroll-mt-24">
-          <p className="ax-eyebrow text-primary">
+          <p className="facet-eyebrow text-primary">
             the three laws
           </p>
           <h2 className="mt-3 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-            What keeps it <span className="ax-grad">from becoming slop</span>.
+            What keeps it <span className="facet-grad">from becoming slop</span>.
           </h2>
           <div className="mt-8 flex flex-col divide-y divide-border rounded-2xl bg-card ring-1 ring-border">
             {LAWS.map((l, i) => (
               <div key={l.title} className="flex flex-col gap-2 p-6 sm:flex-row sm:gap-6">
-                <span className="ax-label text-muted-foreground sm:w-24 sm:shrink-0">
+                <span className="facet-label text-muted-foreground sm:w-24 sm:shrink-0">
                   law {i + 1}
                 </span>
                 <div>
@@ -158,11 +158,11 @@ export default function DocsPage() {
 
         {/* tokens */}
         <section id="stack" className="mt-16 scroll-mt-24">
-          <p className="ax-eyebrow text-primary">
+          <p className="facet-eyebrow text-primary">
             tokens
           </p>
           <h2 className="mt-3 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-            One token block, <span className="ax-grad">both themes</span>.
+            One token block, <span className="facet-grad">both themes</span>.
           </h2>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
             Copy these custom properties and every primitive lands in your
@@ -172,7 +172,7 @@ export default function DocsPage() {
           <div className="mt-8 overflow-hidden rounded-2xl ring-1 ring-border">
             <table className="w-full border-collapse bg-card text-left text-sm">
               <thead>
-                <tr className="border-b border-border ax-label text-muted-foreground">
+                <tr className="border-b border-border facet-label text-muted-foreground">
                   <th className="px-4 py-3 font-medium">token</th>
                   <th className="px-4 py-3 font-medium">light</th>
                   <th className="px-4 py-3 font-medium">dark</th>
@@ -221,7 +221,7 @@ export default function DocsPage() {
 
         {/* families index */}
         <section className="mt-16">
-          <p className="ax-eyebrow text-primary">
+          <p className="facet-eyebrow text-primary">
             the families
           </p>
           <div className="mt-6 flex flex-wrap gap-2">

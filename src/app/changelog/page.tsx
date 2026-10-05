@@ -3,9 +3,9 @@ import Link from "next/link";
 import { COUNTS } from "@/lib/registry";
 
 export const metadata: Metadata = {
-  title: "Changelog | axiom",
+  title: "Changelog | Facet",
   description:
-    "Release notes for the axiom primitive library — engineering log, one entry per release.",
+    "Release notes for the Facet primitive library — engineering log, one entry per release.",
 };
 
 const RELEASES = [
@@ -14,7 +14,7 @@ const RELEASES = [
     date: "2026-10-02",
     title: "Surface pass — one label language, real elevation",
     items: [
-      "Micro-typography unified behind two classes (.ax-label / .ax-eyebrow): every mono eyebrow, corner tag and metadata badge now shares one size, weight and tracking. Seven ad-hoc tracking values retired.",
+      "Micro-typography unified behind two classes (.facet-label / .facet-eyebrow): every mono eyebrow, corner tag and metadata badge now shares one size, weight and tracking. Seven ad-hoc tracking values retired.",
       "Fixed a cascade bug where the stage seat rule suppressed the tailwind ring chain — dark islands lost their rim and elevation in dark mode. The ring now lives inside the seat token for both themes.",
       "Layered elevation everywhere: seat shadows are three-deep (contact, mid, ambient), library tiles lift on hover with matching dark-mode depth, and stages gained an inset top light plus a violet ceiling bloom.",
       "Hero satellite swapped: the decorative orbit orb became a live FIELD tile that reads the actual spring inputs driving the pointer parallax. Satellites share one chrome recipe and a contact shadow.",
@@ -63,14 +63,14 @@ const RELEASES = [
 
 export default function ChangelogPage() {
   return (
-    <main className="flex flex-1 flex-col pt-16">
+    <main aria-label="Changelog" className="flex flex-1 flex-col pt-16">
       <div className="mx-auto w-full max-w-3xl px-5 pb-24 pt-14 sm:px-6 sm:pt-20">
         <header className="flex flex-col gap-4">
-          <p className="ax-eyebrow text-primary">
+          <p className="facet-eyebrow text-primary">
             changelog
           </p>
           <h1 className="text-balance text-3xl font-semibold tracking-[-0.02em] text-foreground sm:text-4xl">
-            Engineering log, <span className="ax-grad">one entry per release</span>.
+            Engineering log, <span className="facet-grad">one entry per release</span>.
           </h1>
           <p className="max-w-xl text-sm leading-relaxed text-muted-foreground">
             What shipped, why, and what it replaced — written the way we work.
@@ -119,10 +119,10 @@ export default function ChangelogPage() {
             Per-family deep passes, more variant forms per primitive, and a
             copy-source view on every entry page. Track it in{" "}
             <Link
-              href="https://github.com/srivtx/axiom"
+              href="https://github.com/srivtx/facet"
               target="_blank"
               rel="noreferrer"
-              className="rounded-sm text-primary transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="rounded-sm text-primary underline decoration-primary/40 underline-offset-2 transition-colors hover:text-foreground hover:decoration-foreground/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
               the repo
             </Link>

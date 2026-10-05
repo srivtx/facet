@@ -44,7 +44,33 @@ const eslintConfig = [...nextCoreWebVitals, ...nextTypescript, {
     "no-useless-escape": "off",
   },
 }, {
-  ignores: ["node_modules/**", ".next/**", "out/**", "build/**", "next-env.d.ts", "examples/**", "skills", "scripts/**"]
+  // Vendored third-party primitives. Synced from upstream rather than
+  // hand-authored, so the React Compiler-era rules that upstream code predates
+  // are scoped off here instead of patched into files a re-sync would overwrite.
+  // Everything else — including type-aware and correctness rules — still applies.
+  files: [
+    "src/components/facet/aceternity/**/*.{ts,tsx}",
+    "src/components/facet/canvas/**/*.{ts,tsx}",
+    "src/components/facet/bits/**/*.{ts,tsx}",
+  ],
+  rules: {
+    "react-hooks/immutability": "off",
+    "react-hooks/set-state-in-effect": "off",
+    "react-hooks/refs": "off",
+    "react-hooks/preserve-manual-memoization": "off",
+    "@typescript-eslint/no-empty-object-type": "off",
+    "@typescript-eslint/no-unused-expressions": "off",
+    "react-hooks/unsupported-syntax": "off",
+    // NOT disabled: rules-of-hooks. Scoping this off is what let
+    // rb-counter (early return above useSpring) and rb-model-viewer
+    // (useGLTF/useLoader inside a useMemo callback) reach main. It is a
+    // correctness rule, not a style preference — keep it on everywhere.
+  }
+}, {
+  // public/** is served verbatim and never enters the module graph, but it does
+  // hold vendored third-party runtime code (three's Draco WASM decoder).
+  // Linting it flags minified upstream we are not allowed to edit.
+  ignores: ["node_modules/**", ".next/**", "out/**", "build/**", "public/**", "next-env.d.ts", "examples/**", "skills", "scripts/**"]
 }];
 
 export default eslintConfig;

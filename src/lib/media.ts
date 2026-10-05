@@ -1,4 +1,4 @@
-/* axiom / media — the real-content system for demo surfaces.
+/* Facet / media — the real-content system for demo surfaces.
    Demo stages render real photography and product-shaped data so the
    library reads as shipped UI, not props. Photos ship with the
    package from /public/photos — no third-party CDN at runtime. */

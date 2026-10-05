@@ -14,10 +14,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { family } = await params;
   const fam = FAMILIES.find((f) => f.id === family);
-  if (!fam) return { title: "Library | axiom" };
+  if (!fam) return { title: "Library | Facet" };
   const count = ENTRIES.filter((e) => e.family === fam.id).length;
   return {
-    title: `${fam.label} primitives — ${count} live | axiom`,
+    title: `${fam.label} primitives — ${count} live | Facet`,
     description: fam.blurb,
   };
 }
@@ -30,7 +30,7 @@ export default async function FamilyPage({
   const { family } = await params;
   if (!FAMILIES.some((f) => f.id === family)) notFound();
   return (
-    <main className="flex flex-1 flex-col pt-16">
+    <main aria-label="Library family" className="flex flex-1 flex-col pt-16">
       <Catalogue initialFamily={family as (typeof FAMILIES)[number]["id"]} />
     </main>
   );

@@ -1,6 +1,6 @@
 "use client";
 
-/* axiom / rows — the catalogue: one alternating
+/* Facet / rows — the catalogue: one alternating
    left/right split per family. Text column always leads the DOM;
    the demo column flips sides every row via order utilities.
    Mobile: demo stacks above the copy. Desktop: 2fr / 3fr grid. */
@@ -10,7 +10,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { DemoStage, StageTicks } from "@/components/ax/stage";
+import { DemoStage, StageTicks } from "@/components/facet/stage";
 import { ENTRIES, FAMILIES, COUNTS, entryPath, familyPath, type FamilyId } from "@/lib/registry";
 import { PHOTOS } from "@/lib/media";
 
@@ -102,11 +102,11 @@ export function FamilyRows({ families }: { families?: FamilyId[] }) {
       {/* section header — the four-part section header */}
       <header className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div>
-          <p className="ax-eyebrow text-primary">
+          <p className="facet-eyebrow text-primary">
             the catalogue · {COUNTS.families} families
           </p>
           <h2 className="mt-3 text-balance text-3xl font-semibold tracking-[-0.02em] text-foreground sm:text-4xl">
-            Each family gets <span className="ax-grad">its own stage</span>.
+            Each family gets <span className="facet-grad">its own stage</span>.
           </h2>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
             One alternating pass per family — copy on one side, the live
@@ -143,7 +143,7 @@ export function FamilyRows({ families }: { families?: FamilyId[] }) {
                 className={cn("flex flex-col gap-5", flip && "md:order-last")}
               >
                 <div className="flex items-center gap-3">
-                  <p className="inline-flex items-center gap-2.5 rounded-full bg-secondary px-3.5 py-1.5 ax-label text-muted-foreground ring-1 ring-border">
+                  <p className="inline-flex items-center gap-2.5 rounded-full bg-secondary px-3.5 py-1.5 facet-label text-muted-foreground ring-1 ring-border">
                     {fam.label}
                     <span className="h-3 w-px bg-border" aria-hidden />
                     <span className="tabular-nums text-foreground/70">{entries.length}</span>
@@ -200,15 +200,15 @@ export function FamilyRows({ families }: { families?: FamilyId[] }) {
                     is never clipped by an ancestor's overflow-hidden.
                     Hover brightens the rim and the corner chrome —
                     no scale-press, the stage is a surface, not a button. */}
-                <div className="ax-stage ax-seat relative flex min-h-[19rem] items-center justify-center overflow-hidden rounded-2xl p-5 sm:min-h-[22rem] md:min-h-[24rem] md:p-8">
-                  <div aria-hidden className="ax-dots absolute inset-0 opacity-40" />
+                <div className="facet-stage facet-seat relative flex min-h-[19rem] items-center justify-center overflow-hidden rounded-2xl p-5 sm:min-h-[22rem] md:min-h-[24rem] md:p-8">
+                  <div aria-hidden className="facet-dots absolute inset-0 opacity-40" />
                   <StageTicks />
                   {/* stage volume — a bloom behind the demo cluster so the
                       surface reads as lit space around the specimens */}
                   <div
                     aria-hidden
                     className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-[72%] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-80 blur-3xl"
-                    style={{ background: "radial-gradient(circle, var(--ax-halo-a), transparent 62%)" }}
+                    style={{ background: "radial-gradient(circle, var(--facet-halo-a), transparent 62%)" }}
                   />
                   <div className="relative z-10 flex w-full flex-wrap items-center justify-center gap-x-10 gap-y-8">
                     {row.demos.map((d) => (
@@ -234,10 +234,10 @@ export function FamilyRows({ families }: { families?: FamilyId[] }) {
                   )}
                   {/* corner chrome — island-local, stays light-on-dark;
                       both corners seat on the same fixed height */}
-                  <span className="absolute left-6 top-6 flex h-4 items-center ax-label text-white/60 transition-colors duration-500 group-hover:text-white/80">
+                  <span className="absolute left-6 top-6 flex h-4 items-center facet-label text-white/60 transition-colors duration-500 group-hover:text-white/80">
                     {row.family} / {lead.id}
                   </span>
-                  <span className="absolute right-6 top-6 flex h-4 items-center gap-2 ax-label text-white/60">
+                  <span className="absolute right-6 top-6 flex h-4 items-center gap-2 facet-label text-white/60">
                     <span className="size-1.5 animate-pulse rounded-full bg-emerald-400/70" />
                     live
                   </span>
